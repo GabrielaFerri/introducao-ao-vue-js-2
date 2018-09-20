@@ -1,5 +1,5 @@
 <template lang="pug">
-  .formulario-de-n-sei-oq
+  .formulario-de-uma-garagem-de-carro
     v-container(grid-list-md)
       v-layout(row wrap)
         v-flex.black(xs12)
@@ -20,25 +20,40 @@
         v-flex(xs6)
           v-text-field(label="Cidade" v-model="payload.cidade")
         v-flex(xs12)
-          v-select(:items="items" label="Estado Civil" v-model="payload.estadoCivil")
-        v-flex(xs12)
-          v-btn.red.white--text(block @click="cadastrar") SALVAR CADASTRO
+          v-select(:items="estadoCivil" label="Estado Civil" v-model="payload.estadoCivil")
+        v-flex(xs6)
+          v-btn.red(block @click="") SALVAR CADASTRO
 
-        v-data-table
-        //- .table === <div class="table">
-        //- .table: (:hearders="hearders"
-        //-         items="desserts"
-        //-         hide-actions
-        //-           class="elevation-1")
-        //-   .slot="items"
-        //-   .slot="props"
+        v-flex(xs12)
+          v-data-table(
+            hide-actions
+            :items="items"
+            :headers="headers"
+            class="elevation-1"
+            )
+            template(slot="items" slot-scope="props")
+               td {{ props.item.nome }}
+               td {{ props.item.idade }}
+</template>
 
 <script>
-import Service from './FormularioService';
 
 export default {
   data: () => ({
-    items: ['solteiro (a)', 'casado (a)', 'divorciado (a)', 'viúvo (a)'],
+    estadoCivil: [
+      'Solteiro',
+      'Casado',
+    ],
+    items: [
+      {
+        nome: 'Teste 1',
+        idade: 25
+      },
+      {
+        nome: 'Teste 2',
+        idade: 30
+      },
+    ],
     payload: {
       nome: '',
       dataDeNascimento: '',
@@ -47,21 +62,17 @@ export default {
       email: '',
       fone: '',
       cidade: '',
-      estadoCivil: '',
     },
+    headers: [
+      {
+        text: 'Nome',
+        sortable: false,
+      },
+      {
+        text: 'Idade',
+        sortable: false,
+      },
+    ],
   }),
-  methods: {
-    cadastrar() {
-      const { payload } = this;
-      Service
-        .cadastrarPessoa(payload)
-        .then(({ response }) => {
-          console.log(response);
-        })
-        .catch(({ error }) => {
-          console.log(error);
-        });
-    },
-  },
 };
 </script>
