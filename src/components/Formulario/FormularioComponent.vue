@@ -20,10 +20,15 @@
         v-flex(xs6)
           v-text-field(label="Cidade" v-model="payload.cidade")
         v-flex(xs12)
-          v-select(:items="estadoCivil" label="Estado Civil" v-model="payload.estadoCivil")
-        v-flex(xs6)
+          .title {{ payload.estadoCivil }} to aqui
+          v-select(
+            item-text="titulo"
+            label="Estado Civil"
+            :items="estadoCivil"
+            v-model="payload.estadoCivil"
+            )
+        v-flex(xs12)
           v-btn.red(block @click="") SALVAR CADASTRO
-
         v-flex(xs12)
           v-data-table(
             hide-actions
@@ -37,12 +42,17 @@
 </template>
 
 <script>
-
 export default {
   data: () => ({
     estadoCivil: [
-      'Solteiro',
-      'Casado',
+      {
+        titulo: 'Solteiro',
+        value: false,
+      },
+      {
+        titulo: 'Casado',
+        value: true,
+      },
     ],
     items: [
       {
@@ -73,6 +83,28 @@ export default {
         sortable: false,
       },
     ],
+    methods: {
+      cadastrar() {
+
+      },
+
+      editarCadastro() {
+
+      },
+
+      buscarLista() {
+
+      },
+
+      excluirUsuario() {
+
+      },
+
+      buscarUsuario() {
+
+      },
+
+    }
   }),
 };
 </script>
