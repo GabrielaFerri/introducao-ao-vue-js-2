@@ -45,32 +45,46 @@
 <script>
 export default {
   data: () => ({
+    nome: 'Gabriela',
+    idade:'18',
+    frutasGabarito: ['banana', 'morango', 'uva'],
     passos: [
       {
         ordem: 1,
-        nome: 'Passo Um',
+        passo: 'passo um',
       },
       {
         ordem: 2,
-        nome: 'Passo Um',
+        passo: 'passo dois',
       },
       {
         ordem: 3,
-        nome: 'Passo Um',
+        passo: 'passo tres',
       },
       {
         ordem: 4,
-        nome: 'Passo Um',
+        passo: 'passo quatro',
       },
       {
         ordem: 5,
-        nome: 'Passo Um',
+        passo: 'passo cinco',
       },
       {
         ordem: 6,
-        nome: 'Passo Um',
+        passo: 'passo seis',
       },
-    ],
-  }),
+       ],
+    usuario: [
+      {
+        nome: 'Gabriela',
+        idade: '18',
+      }],
+  methods: {
+    renderizarOuNao(passo) {
+      if (passo % 2 == 0) return true
+      return false
+    },
+  },
+  })
 };
 </script>
