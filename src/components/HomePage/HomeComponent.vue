@@ -1,3 +1,3 @@
 <template lang="pug">
-  .title Home bem sem graça
+  .title Exercícios de Fixação de Vue.Js
 </template>
