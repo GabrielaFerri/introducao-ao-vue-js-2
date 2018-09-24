@@ -22,13 +22,13 @@
         v-flex(xs12)
           .title {{ payload.estadoCivil }} to aqui
           v-select(
-            item-text="titulo"
             label="Estado Civil"
             :items="estadoCivil"
+            item-text="titulo"
             v-model="payload.estadoCivil"
             )
         v-flex(xs12)
-          v-btn.red(block @click="") SALVAR CADASTRO
+          v-btn.blue(block @click="") SALVAR CADASTRO
         v-flex(xs12)
           v-data-table(
             hide-actions

@@ -5,6 +5,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import HomePage from './components/HomePage/HomeComponent';
 import Exercicio1 from './Exercicios/Exercicio1';
+import Exercicio2 from './Exercicios/Exercicio2';
 
 const routes = [
   {
@@ -15,7 +16,12 @@ const routes = [
     path: '/exercicio-1',
     component: Exercicio1,
   },
+  {
+    path: '/exercicio-2',
+    component: Exercicio2,
+  },
 ];
+
 const router = new VueRouter({routes});
 
 Vue.use(Vuetify)

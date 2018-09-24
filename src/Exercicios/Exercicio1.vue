@@ -15,7 +15,7 @@
         span Resposta:
          p(v-for="fruta in frutasGabarito") {{ fruta }}
       v-flex(xs12)
-      .title Exercicio 3 - Renderize o array de passos até o passo 3 apenas.
+      .title Exercicio 3 - A) Renderize o array de passos até o passo 3 apenas.
       v-flex(xs12)
         v-container(grid-list-md)
           v-layout(row wrap)
@@ -23,7 +23,7 @@
               v-card(v-if="primeiroPasso(passo.ordem)" raised hover )
                 v-card-title.title {{ passo.ordem }}
                 v-card-text.title {{ passo.nome }}
-      .title Exercicio 3 - Renderize o array e renderize apenas os passos pares.
+      .title B) Renderize o array e renderize apenas os passos pares.
       v-flex(xs12)
         v-container(grid-list-md)
           v-layout(row wrap)
@@ -31,7 +31,7 @@
               v-card(v-if="segundoPasso(passo.ordem)" raised hover )
                 v-card-title.title {{ passo.ordem }}
                 v-card-text.title {{ passo.nome }}
-      .title Exercicio 3 - Renderize o array e renderize apenas os passos impares.
+      .title C) Renderize o array e renderize apenas os passos impares.
       v-flex(xs12)
         v-container(grid-list-md)
           v-layout(row wrap)
@@ -46,7 +46,7 @@ export default {
   data: () => ({
     nome: 'Gabriela',
     idade:'18',
-    frutasGabarito: ['banana', 'morango', 'uva', 'amora', 'melão'],
+    frutasGabarito: ['banana', 'morango', 'uva', 'amora'],
     passos: [
       {
         ordem: 1,
