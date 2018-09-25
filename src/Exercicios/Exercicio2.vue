@@ -41,20 +41,20 @@
 <script>
 export default {
   data: () => ({
-    bandas: ['velhas virgens', 'garotos podres', 'blink 182'],
-    numeroUm: 0
-    numeroDois: 0
-    resultadoDaMultiplicacao: 0
+      bandas: ['blink 182', 'pedra letícia', 'garotos podres'],
+      numeroUm: 0
+      numeroDois: 0
+      resultadoDaMultiplicacao: 0
 return {
     select: null
     items:
       cores: [
-      { titulo: 'branco', numero: '1' },
-      { titulo: 'preto', numero: '2' },
-      { titulo: 'cinza', numero: '3' },
-      { titulo: 'azul', numero: '4' },
+        { titulo: 'branco', numero: '1' },
+        { titulo: 'preto', numero: '2' },
+        { titulo: 'cinza', numero: '3' },
+        { titulo: 'azul', numero: '4' },
     ]},
-   cores: ['Branco', 'preto', 'cinza', 'azul'],
+   cores: ['branco', 'preto', 'cinza', 'azul'],
 
   }),
 };
