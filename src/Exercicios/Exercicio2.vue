@@ -30,7 +30,7 @@
         v-flex.mt-5(xs6)
           v-text-field(label="numeroDois")
         v-flex(xs12)
-          .title.blue Eis seu resultado {{ Math.random(1000) }}
+          .title.teal Eis seu resultado {{ Math.random(1000) }}
         v-flex.mt-5(xs12)
           .title BONUS - Brevemente me diga o que é um computed no VUEJS. Com a mesma ideia do exercico anterior, ao invés de usar um método use uma computed.
 </template>

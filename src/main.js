@@ -6,6 +6,7 @@ import 'vuetify/dist/vuetify.min.css'
 import HomePage from './components/HomePage/HomeComponent';
 import Exercicio1 from './Exercicios/Exercicio1';
 import Exercicio2 from './Exercicios/Exercicio2';
+import FormularioComponent from './components/Formulario/FormularioComponent';
 
 const routes = [
   {
@@ -20,7 +21,12 @@ const routes = [
     path: '/exercicio-2',
     component: Exercicio2,
   },
-];
+  {
+    path: '/formulario-component',
+    component: FormularioComponent,
+  },
+
+ ];
 
 const router = new VueRouter({routes});
 

@@ -2,9 +2,9 @@
   .formulario-de-uma-garagem-de-carro
     v-container(grid-list-md)
       v-layout(row wrap)
-        v-flex.black(xs12)
+        v-flex.teal(xs12)
           v-layout(justify-center)
-            .title.white--text NitroCar
+            .title.font-weight-medium.font-italic.white--text Four Wheels
         v-flex(xs12)
           v-text-field(label="Nome" v-model="payload.nome")
         v-flex(xs6)
@@ -20,7 +20,7 @@
         v-flex(xs6)
           v-text-field(label="Cidade" v-model="payload.cidade")
         v-flex(xs12)
-          .title {{ payload.estadoCivil }} to aqui
+          .title {{ payload.estadoCivil }}
           v-select(
             label="Estado Civil"
             :items="estadoCivil"
@@ -28,7 +28,7 @@
             v-model="payload.estadoCivil"
             )
         v-flex(xs12)
-          v-btn.blue(block @click="") SALVAR CADASTRO
+          v-btn.teal.font-weight-medium.font-italic(block @click="") SALVAR CADASTRO
         v-flex(xs12)
           v-data-table(
             hide-actions

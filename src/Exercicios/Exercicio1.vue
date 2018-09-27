@@ -19,7 +19,7 @@
       v-flex(xs12)
         v-container(grid-list-md)
           v-layout(row wrap)
-            v-flex.green(v-for="passo in passos" xs4)
+            v-flex.teal(v-for="passo in passos" xs4)
               v-card(v-if="primeiroPasso(passo.ordem)" raised hover )
                 v-card-title.title {{ passo.ordem }}
                 v-card-text.title {{ passo.nome }}
@@ -27,7 +27,7 @@
       v-flex(xs12)
         v-container(grid-list-md)
           v-layout(row wrap)
-            v-flex.blue(v-for="passo in passos" xs4)
+            v-flex.teal(v-for="passo in passos" xs4)
               v-card(v-if="segundoPasso(passo.ordem)" raised hover )
                 v-card-title.title {{ passo.ordem }}
                 v-card-text.title {{ passo.nome }}
@@ -35,7 +35,7 @@
       v-flex(xs12)
         v-container(grid-list-md)
           v-layout(row wrap)
-            v-flex.yellow(v-for="passo in passos" xs4)
+            v-flex.teal(v-for="passo in passos" xs4)
               v-card(v-if="terceiroPasso(passo.ordem)" raised hover )
                 v-card-title.title {{ passo.ordem }}
                 v-card-text.title {{ passo.nome }}
